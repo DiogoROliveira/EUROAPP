@@ -1,15 +1,15 @@
-const express = require("express");
+express = require("express");
 const cors = require("cors");
 const app = express();
 const port = 3000;
 
 app.use(cors());
-app.use(express.json());
 app.use(express.static('public'))
 
 
-app.get("/hello", (req, res) => {
-  res.send("Hello World!");
+app.get('/ola', function(req, res) {
+  console.log("a responder em /");
+  res.send('Hello Express!');
 });
 
 
@@ -25,8 +25,7 @@ function genRandomNumbers(n, min, max) {
   return numbers;
 }
 
-
-app.get("/generateBet", (req, res) => {
+function genBet(){
   const numbers = genRandomNumbers(5, 1, 50); // 5 números de 1 a 50
   const stars = genRandomNumbers(2, 1, 12);   // 2 estrelas de 1 a 12
 
@@ -38,7 +37,14 @@ app.get("/generateBet", (req, res) => {
     stars: stars,
   };
 
-  res.status(200).json(betData); // Retorna a chave gerada como JSON
+  return betData;
+}
+
+
+app.get("/generateBet", (req, res) => {
+  res.set("content-type", 'application/json');
+  betData = genBet();
+  res.json(betData);
 });
 
 app.listen(port, () => {
