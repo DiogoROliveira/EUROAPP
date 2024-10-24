@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 });
 
 function genNewBet() {
-  fetch("https://euroapp.onrender.com//generateBet")
+  fetch("https://euroapp.onrender.com/generateBet")
     .then((response) => response.json())
     .then((data) => {
       console.log("Received bet data from server:", data);
