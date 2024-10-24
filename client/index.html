@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Euromillions Ticket</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="euro.js"></script>
+  </head>
+  <body>
+    <div id="ticket">
+      <header>
+        <h1>Euromillions</h1>
+        <p class="ticket-logo">National Lottery</p>
+      </header>
+
+      <div class="numbers-section">
+        <h2>Main Numbers</h2>
+        <ol class="numbers" id="olMain">
+          <li>#</li>
+          <li>#</li>
+          <li>#</li>
+          <li>#</li>
+          <li>#</li>
+          <!-- numbers will be inserted here by JavaScript -->
+        </ol>
+      </div>
+
+      <div class="stars-section">
+        <h2>Lucky Stars</h2>
+        <ol class="numbers" id="olStars">
+          <li>#</li>
+          <li>#</li>
+          <!-- stars will be inserted here by JavaScript -->
+        </ol>
+      </div>
+
+      <div class="ticket-info">
+        <h2>=======================</h2>
+        <p id="ticket-date">Date: 03/10/2024</p>
+        <p id="ticket-time">Time: 12:45 PM</p>
+        <p>Price: €2.50</p>
+      </div>
+
+      <footer>
+        <div class="btn-container">
+          <button id="genBtn">New Bet</button>
+        </div>
+        <p class="ticket-footer">Good Luck!</p>
+      </footer>
+    </div>
+  </body>
+</html>
